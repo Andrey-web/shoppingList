@@ -1,0 +1,181 @@
+
+#content {
+    width: 95%;
+    max-width: 375px;
+    font-size: 20px !important;
+    padding-left: 3%;
+    padding-right: 2%;
+    margin: 0;
+    padding-top: 10px;
+}
+#content i {
+    margin-top: 5px;
+    cursor: pointer;
+}
+#content i:hover {
+    opacity: 0.7;
+}
+#content input, #content .nameFull {
+    font-size: 20px !important;
+}
+.products-form .success {
+    width: 22%;
+}
+.products-form {
+    margin-top: 20px;
+    width: 100%;
+}
+.products-form form {
+    display: flex;
+}
+.products-form .prod_name {
+    width: 100%;
+}
+.products-form .prod_name input {
+    width: 100%;
+}
+input.head_input::placeholder {
+    font-size: 14px;
+}
+.products-form .prod_count {
+    width: 43%;
+}
+.products-form .prod_count input {
+    width: 100%;
+}
+div.count input {
+    width: 35px;
+}
+@supports (-webkit-overflow-scrolling: touch) {
+    .products-form .prod_count input, .products-form .prod_name input {
+        width: 90%;
+    }
+    #content i {
+        margin-top: 10px;
+    }
+}
+.products-form .success {
+    width: 9%;
+}
+.list {
+    margin-top: 20px;
+}
+
+tr.status-1 {
+    opacity: 0.3;
+}
+.theaders {
+    display: inline-block;
+}
+
+td, th {
+    width: 162px;
+}
+th {
+    text-align: left;
+}
+
+.theaders {
+    padding-left: 45px;
+}
+.addProd_header {
+    text-align: center;
+    font-weight: bold;
+}
+
+li.status form {
+    display: flex;
+    justify-content: space-between;
+}
+li.status form div {
+    margin-top: 10px;
+}
+li.status:first-child form div {
+     margin-top: 0;
+}
+
+/*new styles*/
+
+.one-productorre {
+    display: block;
+}
+
+i.okIcon:before {
+    color: #14be14;
+}
+i.yesIcon:before {
+    color: gray;
+}
+i.delIcon:before {
+    color: red;
+}
+.products-form div {
+    margin-left: 3%;
+}
+.products.form-group {
+    margin-left: 0;
+}
+.products-form div:first-child {
+    margin-left: 0;
+}
+.il-productorre ol {
+    padding-left: 18px;
+}
+.one-productorre .name {
+    width: 60%;
+    margin-right: 2%;
+    cursor: pointer;
+}
+div.name {
+    min-width: 160px;
+}
+.one-productorre .name input, .one-productorre .count input {
+    width: 100%;
+}
+div.count {
+    opacity: 0;
+}
+.prod_count {
+    display: none;
+}
+.one-productorre .count {
+    width: 8%;
+    margin-right: 2%;
+}
+.iconOk {
+    cursor: pointer;
+}
+.one-productorre .iconOk {
+    width: 30%;
+    display: flex;
+}
+.one-productorre .iconOk label {
+    margin-right: 16%;
+}
+.changeForm form {
+    display: flex;
+}
+.one-productorre input {
+    border: none;
+}
+.one-productorre form {
+    display: flex;
+}
+.il-productorre li {
+    margin-top: 20px;
+}
+.one-productorre i {
+    cursor: pointer;
+}
+li.status form div.nameFull {
+    margin-top: 0;
+}
+.products.form-group .table tbody tr:first-child td {
+    border-top: none;
+}
+.nav-tabs > li > a {
+    font-size: 18px;
+}
+h3 {
+    text-align: center;
+}
