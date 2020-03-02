@@ -61,7 +61,15 @@ require __DIR__ . '/services/sort.php';
 		    </form>
 		    <div class="products form-group">
 		        <table class="table">
-		            <?php foreach ($goods as $good): ?>
+		            <?php foreach ($goods as $good):
+                        if ($good->status == 0) {
+                            $goodsStatus0Arr[] = $good;
+                        } else {
+                            $goodsStatus1Arr[] = $good;
+                        }
+                    endforeach;
+                        foreach ($goodsStatus0Arr as $good):
+                    ?>
 		                <tr class="status status-<?=$good->status?>">
 		                    <form action="" method="post">
 		                        <input name="id" type="hidden" value="<?=$good->id?>">
@@ -100,6 +108,45 @@ require __DIR__ . '/services/sort.php';
 		                    </form>
 		                </tr>
 		            <?php endforeach; ?>
+                    <?php foreach ($goodsStatus1Arr as $good): ?>
+                        <tr class="status status-<?=$good->status?>">
+                            <form action="" method="post">
+                                <input name="id" type="hidden" value="<?=$good->id?>">
+
+                                <td>
+                                    <div class="name">
+                                        <div class="nameFull"><?=$good->name?></div>
+                                        <input class="inputProdName form-control" style="display:none;" name="name" type="text" value="<?=$good->name?>">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="count">
+                                        <input name="count" class="form-control" type="number" value="<?=$good->count?>">
+                                    </div>
+                                </td>
+                                <td>
+                                    <input name="status" type="hidden" value="<?=$good->status?>">
+                                    <div class="iconOk">
+                                        <label for="pChange-<?=$good->id?>"><i style="cursor: pointer" class="fas fa-check-circle okIcon"></i></label>
+                                        <input id="pChange-<?=$good->id?>" class="form-control" style="display: none" type="submit" name="change" value="Изменить">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="iconOk forHide">
+                                        <label for="pYes-<?=$good->id?>"><i class="fas fa-cart-arrow-down yesIcon"></i></label>
+                                        <input id="pYes-<?=$good->id?>" class="form-control" style="display: none" type="submit" name="yes" value="Куплено">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="iconOk forHide">
+                                        <label for="pDel-<?=$good->id?>"><i class="fas fa-trash-alt delIcon"></i></label>
+                                        <input id="pDel-<?=$good->id?>" class="form-control" style="display: none" type="submit" name="del" value="Удалить">
+                                    </div>
+                                </td>
+                                <input name="formId" type="hidden" value="1">
+                            </form>
+                        </tr>
+                    <?php endforeach; ?>
 		        </table>
 		    </div>
 		</div>
@@ -122,7 +169,54 @@ require __DIR__ . '/services/sort.php';
 		    </form>
 		    <div class="products form-group">
 		        <table class="table">
-		            <?php foreach ($hGoods as $good): ?>
+		            <?php foreach ($hGoods as $good):
+                        if ($good->status == 0) {
+                            $hgoodsStatus0Arr[] = $good;
+                        } else {
+                            $hgoodsStatus1Arr[] = $good;
+                        }
+                    endforeach;
+                        foreach ($hgoodsStatus0Arr as $good):
+                    ?>
+		                <tr class="status status-<?=$good->status?>">
+		                    <form action="" method="post">
+		                        <input name="id" type="hidden" value="<?=$good->id?>">
+
+		                        <td>
+		                            <div class="name">
+		                                <div class="nameFull"><?=$good->name?></div>
+		                                <input class="inputProdName form-control" style="display:none;" name="name" type="text" value="<?=$good->name?>">
+		                            </div>
+		                        </td>
+		                        <td>
+		                            <div class="count">
+		                                <input name="count" class="form-control" type="number" value="<?=$good->count?>">
+		                            </div>
+		                        </td>
+		                        <td>
+		                            <input name="status" type="hidden" value="<?=$good->status?>">
+		                            <div class="iconOk">
+		                                <label for="pChange-<?=$good->id?>H"><i style="cursor: pointer" class="fas fa-check-circle okIcon"></i></label>
+		                                <input id="pChange-<?=$good->id?>H" class="form-control" style="display: none" type="submit" name="change" value="Изменить">
+		                            </div>
+		                        </td>
+		                        <td>
+		                            <div class="iconOk forHide">
+		                                <label for="pYes-<?=$good->id?>H"><i class="fas fa-cart-arrow-down yesIcon"></i></label>
+		                                <input id="pYes-<?=$good->id?>H" class="form-control" style="display: none" type="submit" name="yes" value="Куплено">
+		                            </div>
+		                        </td>
+		                        <td>
+		                            <div class="iconOk forHide">
+		                                <label for="pDel-<?=$good->id?>H"><i class="fas fa-trash-alt delIcon"></i></label>
+		                                <input id="pDel-<?=$good->id?>H" class="form-control" style="display: none" type="submit" name="del" value="Удалить">
+		                            </div>
+		                        </td>
+                                <input name="formId" type="hidden" value="2">
+		                    </form>
+		                </tr>
+		            <?php endforeach; ?>
+                    <?php foreach ($hgoodsStatus1Arr as $good): ?>
 		                <tr class="status status-<?=$good->status?>">
 		                    <form action="" method="post">
 		                        <input name="id" type="hidden" value="<?=$good->id?>">
@@ -183,7 +277,54 @@ require __DIR__ . '/services/sort.php';
 		    </form>
 		    <div class="products form-group">
 		        <table class="table">
-		            <?php foreach ($pharmacy as $good): ?>
+		            <?php foreach ($pharmacy as $good):
+                        if ($good->status == 0) {
+                            $pharmacyStatus0Arr[] = $good;
+                        } else {
+                            $pharmacyStatus1Arr[] = $good;
+                        }
+                        endforeach;
+                        foreach ($pharmacyStatus0Arr as $good):
+                    ?>
+		                <tr class="status status-<?=$good->status?>">
+		                    <form action="" method="post">
+		                        <input name="id" type="hidden" value="<?=$good->id?>">
+
+		                        <td>
+		                            <div class="name">
+		                                <div class="nameFull"><?=$good->name?></div>
+		                                <input class="inputProdName form-control" style="display:none;" name="name" type="text" value="<?=$good->name?>">
+		                            </div>
+		                        </td>
+		                        <td>
+		                            <div class="count">
+		                                <input name="count" class="form-control" type="number" value="<?=$good->count?>">
+		                            </div>
+		                        </td>
+		                        <td>
+		                            <input name="status" type="hidden" value="<?=$good->status?>">
+		                            <div class="iconOk">
+		                                <label for="pChange-<?=$good->id?>Pharm"><i style="cursor: pointer" class="fas fa-check-circle okIcon"></i></label>
+		                                <input id="pChange-<?=$good->id?>Pharm" class="form-control" style="display: none" type="submit" name="change" value="Изменить">
+		                            </div>
+		                        </td>
+		                        <td>
+		                            <div class="iconOk forHide">
+		                                <label for="pYes-<?=$good->id?>Pharm"><i class="fas fa-cart-arrow-down yesIcon"></i></label>
+		                                <input id="pYes-<?=$good->id?>Pharm" class="form-control" style="display: none" type="submit" name="yes" value="Куплено">
+		                            </div>
+		                        </td>
+		                        <td>
+		                            <div class="iconOk forHide">
+		                                <label for="pDel-<?=$good->id?>Pharm"><i class="fas fa-trash-alt delIcon"></i></label>
+		                                <input id="pDel-<?=$good->id?>Pharm" class="form-control" style="display: none" type="submit" name="del" value="Удалить">
+		                            </div>
+		                        </td>
+                                <input name="formId" type="hidden" value="3">
+		                    </form>
+		                </tr>
+		            <?php endforeach; ?>
+                    <?php foreach ($pharmacyStatus0Arr as $good): ?>
 		                <tr class="status status-<?=$good->status?>">
 		                    <form action="" method="post">
 		                        <input name="id" type="hidden" value="<?=$good->id?>">

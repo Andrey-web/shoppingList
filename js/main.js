@@ -6,5 +6,5 @@ $(document).ready(function () {
 
         $('.count').hide();
         $('.forHide').hide();
-    })
+    });
 });
