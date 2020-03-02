@@ -47,5 +47,22 @@ class Db
     {
         return $this->dbh->lastInsertId();
     }
+
+    public function checkShoppingListName($table, $name)
+    {
+        $sql = "SELECT * FROM ".$table." WHERE name LIKE '%".$name."%'";
+        $sth = $this->dbh->prepare($sql);
+        $res = $sth->execute();
+        $data = $sth->fetchAll();
+        return $data;
+    }
+
+    public function setStatus($table, $name)
+    {
+        $sql = "UPDATE ".$table." SET status = 0 WHERE name ='".$name."'";
+        $sth = $this->dbh->prepare($sql);
+        $res = $sth->execute();
+        return $res;
+    }
 }
 

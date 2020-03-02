@@ -1,5 +1,6 @@
 <?php
 
+use App\Db;
 use App\Models\ShoppingList;
 use App\Models\Hoz;
 use App\Models\Pharmacy;
@@ -19,26 +20,43 @@ if (isset($_POST['submit'])) {
 
         if ($formId == 1) {
             $list = new ShoppingList();
+            $table = 'shoppinglist';
+            $location = 'location: http://list.zvendinov.ru/?tabId=1';
         } elseif ($formId == 2) {
             $list = new Hoz();
+            $table = 'hoz';
+            $location = 'location: http://list.zvendinov.ru/?tabId=2';
         } elseif ($formId == 3) {
             $list = new Pharmacy();
+            $table = 'pharmacy';
+            $location = 'location: http://list.zvendinov.ru/?tabId=3';
         }
 
-        $list->name = $_POST['name'];
+        $list->name = trim($_POST['name']);
+        $db = new Db();
+        $result = $db->checkShoppingListName($table, $_POST['name']);
+
+        if (!empty($result)) {
+            $db->setStatus($table, $_POST['name']);
+            Header($location);
+            exit();
+        } else {
+            $list->status = 0;
+        }
+
         $list->count = $count;
-        $list->status = 0;
+
 
         $add = $list->addShoppingList();
 
         if ($formId == 1) {
-            Header('location: http://list.zvendinov.ru/?tabId=1');
+            Header($location);
             exit();
         } elseif ($formId == 2) {
-            Header('location: http://list.zvendinov.ru/?tabId=2');
+            Header($location);
             exit();
         } elseif ($formId == 3) {
-            Header('location: http://list.zvendinov.ru/?tabId=3');
+            Header($location);
             exit();
         }
 

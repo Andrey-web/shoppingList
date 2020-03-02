@@ -3,6 +3,7 @@
 use App\Models\ShoppingList;
 use App\Models\Hoz;
 use App\Models\Pharmacy;
+use App\Models\DuplicateContentChecker;
 
 session_start();
 
@@ -14,7 +15,6 @@ $hGoods = Hoz::findAll();
 $pharmacy = Pharmacy::findAll();
 
 require __DIR__ . '/services/sort.php';
-
 ?>
 
 <!DOCTYPE html>
