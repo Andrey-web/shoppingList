@@ -324,7 +324,7 @@ require __DIR__ . '/services/sort.php';
 		                    </form>
 		                </tr>
 		            <?php endforeach; ?>
-                    <?php foreach ($pharmacyStatus0Arr as $good): ?>
+                    <?php foreach ($pharmacyStatus1Arr as $good): ?>
 		                <tr class="status status-<?=$good->status?>">
 		                    <form action="" method="post">
 		                        <input name="id" type="hidden" value="<?=$good->id?>">
