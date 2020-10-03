@@ -9,7 +9,7 @@ class Db
 
     public function __construct()
     {
-        $this->dbh = new \PDO('mysql:dbname=admin_list;host=localhost;charset=utf8;', 'admin_list', 'Raedge12');
+        $this->dbh = new \PDO('mysql:dbname=ci52131_shlist;host=localhost;charset=utf8;', 'ci52131_shlist', 'Raedge12');
     }
 
     public function execute($sql)

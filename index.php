@@ -94,8 +94,7 @@ require __DIR__ . '/services/sort.php';
 		                        </td>
 		                        <td>
 		                            <div class="iconOk forHide">
-		                                <label for="pYes-<?=$good->id?>"><i class="fas fa-cart-arrow-down yesIcon"></i></label>
-		                                <input id="pYes-<?=$good->id?>" class="form-control" style="display: none" type="submit" name="yes" value="Куплено">
+		                                <i class="fas fa-cart-arrow-down yesIcon"></i>
 		                            </div>
 		                        </td>
 		                        <td>
