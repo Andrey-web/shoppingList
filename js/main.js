@@ -61,6 +61,20 @@ $(document).ready(function () {
         });
     });
 
+    $(document).on('click', '.delIcon', function (e) {
+        e.preventDefault();
+        let id = $(this).parents('tr').find('input[name=id]').val();
+        let formId = $(this).parents('tr').find('input[name=formId]').val();
+        let tr = $(this).parents('tr');
+        $.ajax({
+            data: {id: id, del: 1, formId: formId},
+            method: 'POST',
+            success: function(data) {
+                tr.hide();
+            },
+        });
+    })
+
     $('.retweet').on('click', function () {
         location.reload();
     });
