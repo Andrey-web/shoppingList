@@ -24,9 +24,9 @@ require __DIR__ . '/services/sort.php';
     <title>Список покупок</title>
     <script src="/js/jquery.js"></script>
     <link rel="stylesheet" href="/uploads/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css?45">
-    <link rel="stylesheet" href="css/mobile.css?14">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css?12" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css?47">
+    <link rel="stylesheet" href="css/mobile.css?17">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css?13" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="apple-touch-icon" href="/uploads/touch-icon-iphone.png">
     <link rel="apple-touch-icon" sizes="76x76" href="/uploads/touch-icon-ipad.png">
     <link rel="apple-touch-icon" sizes="120x120" href="/uploads/touch-icon-iphone-retina.png">
@@ -35,11 +35,11 @@ require __DIR__ . '/services/sort.php';
 <body id="content">
 
 <ul class="nav nav-tabs">
-  <li<?php if ($_GET['tabId'] == 1 || !$_GET['tabId']){echo ' class="active"';} ?>><a data-toggle="tab" href="#panel1">Продукты</a></li>
-  <li<?php if ($_GET['tabId'] == 2){echo ' class="active"';} ?>><a data-toggle="tab" href="#panel2">Для дома</a></li>
-  <li<?php if ($_GET['tabId'] == 3){echo ' class="active"';} ?>><a data-toggle="tab" href="#panel3">Аптека</a></li>
+  <li data-tabId="1" <?php if ($_GET['tabId'] == 1 || !$_GET['tabId']){echo ' class="active"';} ?>><a data-toggle="tab" href="#panel1">Продукты</a></li>
+  <li data-tabId="2" <?php if ($_GET['tabId'] == 2){echo ' class="active"';} ?>><a data-toggle="tab" href="#panel2">Для дома</a></li>
+  <li data-tabId="3" <?php if ($_GET['tabId'] == 3){echo ' class="active"';} ?>><a data-toggle="tab" href="#panel3">Аптека</a></li>
 </ul>
-
+<span class="retweet"><i class="fas fa-retweet"></i>Обновить</span>
 <div class="tab-content">
 	<div id="panel1" class="tab-pane fade <?php if ($_GET['tabId'] == 1 || !$_GET['tabId']){echo ' active in';} ?>">
 		<h3>Продукты</h3>
@@ -361,6 +361,6 @@ require __DIR__ . '/services/sort.php';
 </div>
 
     <script type="text/javascript" src="/uploads/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js?r=2"></script>
+    <script type="text/javascript" src="js/main.js?r=4"></script>
 </body>
 </html>

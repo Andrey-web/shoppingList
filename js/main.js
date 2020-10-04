@@ -31,4 +31,14 @@ $(document).ready(function () {
             },
         });
     });
+
+    $('.retweet').on('click', function () {
+        location.reload();
+    });
+
+    $('.nav-tabs li').on('click', function () {
+        let queryParams = new URLSearchParams(window.location.search);
+        queryParams.set("tabId", $(this).attr('data-tabId'));
+        history.replaceState(null, null, "?"+queryParams.toString());
+    });
 });
