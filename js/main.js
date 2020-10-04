@@ -15,7 +15,7 @@ $(document).ready(function () {
         let name = $(this).attr('data-name');
         let count = $(this).attr('data-count');
         let formId = $(this).attr('data-formId');
-        let tr = $(this).parent().parent().parent();
+        let tr = $(this).parents('tr');
 
         $(this).removeClass('fa-cart-arrow-down').addClass('fa-spinner fa-spin');
 
