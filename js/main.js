@@ -17,6 +17,10 @@ $(document).ready(function () {
         let formId = $(this).attr('data-formId');
         let tr = $(this).parents('tr');
 
+        let queryParams = new URLSearchParams(window.location.search);
+        queryParams.set("tabId", formId);
+        history.replaceState(null, null, "?"+queryParams.toString());
+
         $(this).removeClass('fa-cart-arrow-down').addClass('fa-spinner fa-spin');
 
         $.ajax({
