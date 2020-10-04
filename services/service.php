@@ -62,9 +62,7 @@ if (isset($_POST['submit'])) {
 
     }
 
-}
-
-if (isset($_POST['del'])) {
+} elseif (isset($_POST['del'])) {
     $id = $_POST['id'];
     $formId = $_POST['formId'];
 
@@ -87,61 +85,30 @@ if (isset($_POST['del'])) {
         Header('location: https://list.zvendinov.ru/?tabId=3');
         exit();
     }
-}
-
-if (isset($_POST['change'])) {
-    $id = $_POST['id'];
-    $formId = $_POST['formId'];
-    $name = $_POST['name'];
-    $count = $_POST['count'];
-    $status = 0;
-
-    if ($formId == 1) {
-        $list = new ShoppingList();
-    } elseif ($formId == 2) {
-        $list = new Hoz();
-    } elseif ($formId == 3) {
-        $list = new Pharmacy();
-    }
-
-    $list::update($id, $name, $count, $status);
-    if ($formId == 1) {
-        Header('location: https://list.zvendinov.ru/?tabId=1');
-        exit();
-    } elseif ($formId == 2) {
-        Header('location: https://list.zvendinov.ru/?tabId=2');
-        exit();
-    } elseif ($formId == 3) {
-        Header('location: https://list.zvendinov.ru/?tabId=3');
-        exit();
-    }
-}
-
-if (isset($_POST['yes'])) {
-    $id = $_POST['id'];
-    $formId = $_POST['formId'];
-    $name = $_POST['name'];
-    $count = $_POST['count'];
-    $status = 1;
-
-    if ($formId == 1) {
-        $list = new ShoppingList();
-    } elseif ($formId == 2) {
-        $list = new Hoz();
-    } elseif ($formId == 3) {
-        $list = new Pharmacy();
-    }
-
-    $list::update($id, $name, $count, $status);
     exit();
-//    if ($formId == 1) {
-//        Header('location: https://list.zvendinov.ru/?tabId=1');
-//        exit();
-//    } elseif ($formId == 2) {
-//        Header('location: https://list.zvendinov.ru/?tabId=2');
-//        exit();
-//    } elseif ($formId == 3) {
-//        Header('location: https://list.zvendinov.ru/?tabId=3');
-//        exit();
-//    }
+
+} elseif (isset($_POST['change']) || isset($_POST['yes'])) {
+    if (isset($_POST['change'])) {
+        $status = 0;
+    }
+    if (isset($_POST['yes'])) {
+        $status = 1;
+    }
+
+    $id = $_POST['id'];
+    $formId = $_POST['formId'];
+    $name = $_POST['name'];
+    $count = $_POST['count'];
+
+
+    if ($formId == 1) {
+        $list = new ShoppingList();
+    } elseif ($formId == 2) {
+        $list = new Hoz();
+    } elseif ($formId == 3) {
+        $list = new Pharmacy();
+    }
+
+    $list::update($id, $name, $count, $status);
 }
+

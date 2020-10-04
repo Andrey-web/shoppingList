@@ -87,8 +87,7 @@ require __DIR__ . '/services/sort.php';
 		                        <td>
 		                            <input name="status" type="hidden" value="<?=$good->status?>">
 		                            <div class="iconOk">
-		                                <label for="pChange-<?=$good->id?>"><i style="cursor: pointer" class="fas fa-check-circle okIcon"></i></label>
-		                                <input id="pChange-<?=$good->id?>" class="form-control" style="display: none" type="submit" name="change" value="Изменить">
+		                                <i data-formId="1" data-name="<?=$good->name?>" data-count="<?=$good->count?>" data-status="<?=$good->status?>" data-id="<?=$good->id?>" style="cursor: pointer" class="fas fa-check-circle okIcon"></i>
 		                            </div>
 		                        </td>
 		                        <td>
