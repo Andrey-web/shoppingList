@@ -183,6 +183,16 @@ h3 {
     display: inline-block;
     border-bottom: 1px dashed;
 }
+.retweet.active {
+    font-size: 12px;
+    display: inline-block;
+    border-bottom: 1px dashed;
+    background: red;
+    position: fixed;
+    padding: 10px;
+    color: #fff;
+    z-index: 9;
+}
 .retweet i {
     margin-right: 5px;
 }

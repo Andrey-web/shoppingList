@@ -24,7 +24,7 @@ require __DIR__ . '/services/sort.php';
     <title>Список покупок</title>
     <script src="/js/jquery.js"></script>
     <link rel="stylesheet" href="/uploads/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css?47">
+    <link rel="stylesheet" href="css/style.css?48">
     <link rel="stylesheet" href="css/mobile.css?17">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css?13" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="apple-touch-icon" href="/uploads/touch-icon-iphone.png">
@@ -86,8 +86,9 @@ require __DIR__ . '/services/sort.php';
 		                        </td>
 		                        <td>
 		                            <input name="status" type="hidden" value="<?=$good->status?>">
-		                            <div class="iconOk">
-		                                <i data-formId="1" data-name="<?=$good->name?>" data-count="<?=$good->count?>" data-status="<?=$good->status?>" data-id="<?=$good->id?>" style="cursor: pointer" class="fas fa-check-circle okIcon"></i>
+		                            <div style="display:none;" class="iconOk">
+		                                <label for="pChange-<?=$good->id?>"><i style="cursor: pointer" class="fas fa-check-circle okIcon"></i></label>
+		                                <input id="pChange-<?=$good->id?>" class="form-control" style="display: none" type="submit" name="change" value="Изменить">
 		                            </div>
 		                        </td>
 		                        <td>
@@ -124,8 +125,7 @@ require __DIR__ . '/services/sort.php';
                                 <td>
                                     <input name="status" type="hidden" value="<?=$good->status?>">
                                     <div class="iconOk">
-                                        <label for="pChange-<?=$good->id?>"><i style="cursor: pointer" class="fas fa-check-circle okIcon"></i></label>
-                                        <input id="pChange-<?=$good->id?>" class="form-control" style="display: none" type="submit" name="change" value="Изменить">
+                                        <i data-formId="1" data-name="<?=$good->name?>" data-count="<?=$good->count?>" data-status="<?=$good->status?>" data-id="<?=$good->id?>" style="cursor: pointer" class="fas fa-check-circle okIcon"></i>
                                     </div>
                                 </td>
                                 <td>
@@ -191,7 +191,7 @@ require __DIR__ . '/services/sort.php';
 		                        </td>
 		                        <td>
 		                            <input name="status" type="hidden" value="<?=$good->status?>">
-		                            <div class="iconOk">
+		                            <div style="display:none;" class="iconOk">
 		                                <label for="pChange-<?=$good->id?>H"><i style="cursor: pointer" class="fas fa-check-circle okIcon"></i></label>
 		                                <input id="pChange-<?=$good->id?>H" class="form-control" style="display: none" type="submit" name="change" value="Изменить">
 		                            </div>
@@ -230,8 +230,7 @@ require __DIR__ . '/services/sort.php';
 		                        <td>
 		                            <input name="status" type="hidden" value="<?=$good->status?>">
 		                            <div class="iconOk">
-		                                <label for="pChange-<?=$good->id?>H"><i style="cursor: pointer" class="fas fa-check-circle okIcon"></i></label>
-		                                <input id="pChange-<?=$good->id?>H" class="form-control" style="display: none" type="submit" name="change" value="Изменить">
+                                        <i data-formId="2" data-name="<?=$good->name?>" data-count="<?=$good->count?>" data-status="<?=$good->status?>" data-id="<?=$good->id?>" style="cursor: pointer" class="fas fa-check-circle okIcon"></i>
 		                            </div>
 		                        </td>
 		                        <td>
@@ -296,7 +295,7 @@ require __DIR__ . '/services/sort.php';
 		                        </td>
 		                        <td>
 		                            <input name="status" type="hidden" value="<?=$good->status?>">
-		                            <div class="iconOk">
+		                            <div style="display:none;" class="iconOk">
 		                                <label for="pChange-<?=$good->id?>Pharm"><i style="cursor: pointer" class="fas fa-check-circle okIcon"></i></label>
 		                                <input id="pChange-<?=$good->id?>Pharm" class="form-control" style="display: none" type="submit" name="change" value="Изменить">
 		                            </div>
@@ -335,8 +334,7 @@ require __DIR__ . '/services/sort.php';
 		                        <td>
 		                            <input name="status" type="hidden" value="<?=$good->status?>">
 		                            <div class="iconOk">
-		                                <label for="pChange-<?=$good->id?>Pharm"><i style="cursor: pointer" class="fas fa-check-circle okIcon"></i></label>
-		                                <input id="pChange-<?=$good->id?>Pharm" class="form-control" style="display: none" type="submit" name="change" value="Изменить">
+                                        <i data-formId="3" data-name="<?=$good->name?>" data-count="<?=$good->count?>" data-status="<?=$good->status?>" data-id="<?=$good->id?>" style="cursor: pointer" class="fas fa-check-circle okIcon"></i>
 		                            </div>
 		                        </td>
 		                        <td>
@@ -360,6 +358,6 @@ require __DIR__ . '/services/sort.php';
 </div>
 
     <script type="text/javascript" src="/uploads/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js?r=4"></script>
+    <script type="text/javascript" src="js/main.js?r=5"></script>
 </body>
 </html>

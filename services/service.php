@@ -87,11 +87,11 @@ if (isset($_POST['submit'])) {
     }
     exit();
 
-} elseif (isset($_POST['change']) || isset($_POST['yes'])) {
-    if (isset($_POST['change'])) {
+} elseif (isset($_POST['postType'])) {
+    if ($_POST['postType'] == 'change') {
         $status = 0;
     }
-    if (isset($_POST['yes'])) {
+    if ($_POST['postType'] == 'yes' || $_POST['postType'] == 'removeBtn') {
         $status = 1;
     }
 
