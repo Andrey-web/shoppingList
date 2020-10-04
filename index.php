@@ -24,7 +24,7 @@ require __DIR__ . '/services/sort.php';
     <title>Список покупок</title>
     <script src="/js/jquery.js"></script>
     <link rel="stylesheet" href="/uploads/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css?50">
+    <link rel="stylesheet" href="css/style.css?51">
     <link rel="stylesheet" href="css/mobile.css?17">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css?13" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="apple-touch-icon" href="/uploads/touch-icon-iphone.png">
@@ -358,6 +358,6 @@ require __DIR__ . '/services/sort.php';
 </div>
 
     <script type="text/javascript" src="/uploads/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js?r=6"></script>
+    <script type="text/javascript" src="js/main.js?r=7"></script>
 </body>
 </html>
