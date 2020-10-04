@@ -1,13 +1,18 @@
 $(document).ready(function () {
-    $('.nameFull').on('click', function () {
-        $(this).hide();
-        $(this).siblings(".inputProdName").show();
-        $(this).siblings(".inputProdName").focus();
 
-        $(this).parents('tr').find('.iconUpdate').show();
-        $('.count').hide();
-        $('.forHide').hide();
-    });
+        $('.nameFull').on('click', function (e) {
+            if ($(this).parents('tr').hasClass('status-0')) {
+                $(this).hide();
+                $(this).siblings(".inputProdName").show();
+                $(this).siblings(".inputProdName").focus();
+
+                $(this).parents('tr').find('.iconUpdate').show();
+                $('.count').hide();
+                $('.forHide').hide();
+            } else {
+                e.preventDefault();
+            }
+        });
 
     $(document).on('click', '.yesIcon, .okIcon, .removeBtn', function () {
 

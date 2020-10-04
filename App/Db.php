@@ -50,7 +50,8 @@ class Db
 
     public function checkShoppingListName($table, $name)
     {
-        $sql = "SELECT * FROM ".$table." WHERE name LIKE '".$name."'";
+        $name = trim($name);
+        $sql = "SELECT * FROM ".$table." WHERE name =  '".$name."'";
         $sth = $this->dbh->prepare($sql);
         $res = $sth->execute();
         $data = $sth->fetchAll();
