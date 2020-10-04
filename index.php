@@ -3,7 +3,6 @@
 use App\Models\ShoppingList;
 use App\Models\Hoz;
 use App\Models\Pharmacy;
-use App\Models\DuplicateContentChecker;
 
 session_start();
 
@@ -94,7 +93,7 @@ require __DIR__ . '/services/sort.php';
 		                        </td>
 		                        <td>
 		                            <div class="iconOk forHide">
-		                                <i class="fas fa-cart-arrow-down yesIcon"></i>
+		                                <i data-formId="1" data-name="<?=$good->name?>" data-count="<?=$good->count?>" data-status="<?=$good->status?>" data-id="<?=$good->id?>" class="fas fa-cart-arrow-down yesIcon"></i>
 		                            </div>
 		                        </td>
 		                        <td>
@@ -132,8 +131,7 @@ require __DIR__ . '/services/sort.php';
                                 </td>
                                 <td>
                                     <div class="iconOk forHide">
-                                        <label for="pYes-<?=$good->id?>"><i class="fas fa-cart-arrow-down yesIcon"></i></label>
-                                        <input id="pYes-<?=$good->id?>" class="form-control" style="display: none" type="submit" name="yes" value="Куплено">
+
                                     </div>
                                 </td>
                                 <td>
@@ -201,8 +199,7 @@ require __DIR__ . '/services/sort.php';
 		                        </td>
 		                        <td>
 		                            <div class="iconOk forHide">
-		                                <label for="pYes-<?=$good->id?>H"><i class="fas fa-cart-arrow-down yesIcon"></i></label>
-		                                <input id="pYes-<?=$good->id?>H" class="form-control" style="display: none" type="submit" name="yes" value="Куплено">
+                                        <i data-formId="2" data-name="<?=$good->name?>" data-count="<?=$good->count?>" data-status="<?=$good->status?>" data-id="<?=$good->id?>" class="fas fa-cart-arrow-down yesIcon"></i>
 		                            </div>
 		                        </td>
 		                        <td>
@@ -240,8 +237,6 @@ require __DIR__ . '/services/sort.php';
 		                        </td>
 		                        <td>
 		                            <div class="iconOk forHide">
-		                                <label for="pYes-<?=$good->id?>H"><i class="fas fa-cart-arrow-down yesIcon"></i></label>
-		                                <input id="pYes-<?=$good->id?>H" class="form-control" style="display: none" type="submit" name="yes" value="Куплено">
 		                            </div>
 		                        </td>
 		                        <td>
@@ -309,8 +304,7 @@ require __DIR__ . '/services/sort.php';
 		                        </td>
 		                        <td>
 		                            <div class="iconOk forHide">
-		                                <label for="pYes-<?=$good->id?>Pharm"><i class="fas fa-cart-arrow-down yesIcon"></i></label>
-		                                <input id="pYes-<?=$good->id?>Pharm" class="form-control" style="display: none" type="submit" name="yes" value="Куплено">
+                                        <i data-formId="3" data-name="<?=$good->name?>" data-count="<?=$good->count?>" data-status="<?=$good->status?>" data-id="<?=$good->id?>" class="fas fa-cart-arrow-down yesIcon"></i>
 		                            </div>
 		                        </td>
 		                        <td>
@@ -348,8 +342,6 @@ require __DIR__ . '/services/sort.php';
 		                        </td>
 		                        <td>
 		                            <div class="iconOk forHide">
-		                                <label for="pYes-<?=$good->id?>Pharm"><i class="fas fa-cart-arrow-down yesIcon"></i></label>
-		                                <input id="pYes-<?=$good->id?>Pharm" class="form-control" style="display: none" type="submit" name="yes" value="Куплено">
 		                            </div>
 		                        </td>
 		                        <td>

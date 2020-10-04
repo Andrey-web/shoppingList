@@ -21,15 +21,15 @@ if (isset($_POST['submit'])) {
         if ($formId == 1) {
             $list = new ShoppingList();
             $table = 'shoppinglist';
-            $location = 'location: http://list.zvendinov.ru/?tabId=1';
+            $location = 'location: https://list.zvendinov.ru/?tabId=1';
         } elseif ($formId == 2) {
             $list = new Hoz();
             $table = 'hoz';
-            $location = 'location: http://list.zvendinov.ru/?tabId=2';
+            $location = 'location: https://list.zvendinov.ru/?tabId=2';
         } elseif ($formId == 3) {
             $list = new Pharmacy();
             $table = 'pharmacy';
-            $location = 'location: http://list.zvendinov.ru/?tabId=3';
+            $location = 'location: https://list.zvendinov.ru/?tabId=3';
         }
 
         $list->name = trim($_POST['name']);
@@ -78,13 +78,13 @@ if (isset($_POST['del'])) {
 
     $list::delete($id);
     if ($formId == 1) {
-        Header('location: http://list.zvendinov.ru/?tabId=1');
+        Header('location: https://list.zvendinov.ru/?tabId=1');
         exit();
     } elseif ($formId == 2) {
-        Header('location: http://list.zvendinov.ru/?tabId=2');
+        Header('location: https://list.zvendinov.ru/?tabId=2');
         exit();
     } elseif ($formId == 3) {
-        Header('location: http://list.zvendinov.ru/?tabId=3');
+        Header('location: https://list.zvendinov.ru/?tabId=3');
         exit();
     }
 }
@@ -106,13 +106,13 @@ if (isset($_POST['change'])) {
 
     $list::update($id, $name, $count, $status);
     if ($formId == 1) {
-        Header('location: http://list.zvendinov.ru/?tabId=1');
+        Header('location: https://list.zvendinov.ru/?tabId=1');
         exit();
     } elseif ($formId == 2) {
-        Header('location: http://list.zvendinov.ru/?tabId=2');
+        Header('location: https://list.zvendinov.ru/?tabId=2');
         exit();
     } elseif ($formId == 3) {
-        Header('location: http://list.zvendinov.ru/?tabId=3');
+        Header('location: https://list.zvendinov.ru/?tabId=3');
         exit();
     }
 }
@@ -132,16 +132,16 @@ if (isset($_POST['yes'])) {
         $list = new Pharmacy();
     }
 
-
     $list::update($id, $name, $count, $status);
-    if ($formId == 1) {
-        Header('location: http://list.zvendinov.ru/?tabId=1');
-        exit();
-    } elseif ($formId == 2) {
-        Header('location: http://list.zvendinov.ru/?tabId=2');
-        exit();
-    } elseif ($formId == 3) {
-        Header('location: http://list.zvendinov.ru/?tabId=3');
-        exit();
-    }
+    exit();
+//    if ($formId == 1) {
+//        Header('location: https://list.zvendinov.ru/?tabId=1');
+//        exit();
+//    } elseif ($formId == 2) {
+//        Header('location: https://list.zvendinov.ru/?tabId=2');
+//        exit();
+//    } elseif ($formId == 3) {
+//        Header('location: https://list.zvendinov.ru/?tabId=3');
+//        exit();
+//    }
 }
