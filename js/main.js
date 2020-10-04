@@ -4,6 +4,7 @@ $(document).ready(function () {
         $(this).siblings(".inputProdName").show();
         $(this).siblings(".inputProdName").focus();
 
+        $(this).parents('tr').find('.iconUpdate').show();
         $('.count').hide();
         $('.forHide').hide();
     });

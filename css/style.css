@@ -99,7 +99,7 @@ li.status:first-child form div {
     display: block;
 }
 
-i.okIcon:before {
+i.okIcon:before, i.iconUpdate:before {
     color: #14be14;
 }
 i.yesIcon:before {
@@ -141,14 +141,14 @@ div.count {
     width: 8%;
     margin-right: 2%;
 }
-.iconOk {
+.iconOk, .iconUpdate {
     cursor: pointer;
 }
-.one-productorre .iconOk {
+.one-productorre .iconOk, .iconUpdate {
     width: 30%;
     display: flex;
 }
-.one-productorre .iconOk label {
+.one-productorre .iconOk label, .iconUpdate label {
     margin-right: 16%;
 }
 .changeForm form {
